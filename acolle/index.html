@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acolle — Proteção inteligente contra golpes digitais</title>
+<meta name="description" content="O Acolle utiliza Inteligência Artificial para ajudar você a identificar possíveis golpes em chamadas, mensagens e links suspeitos. Segurança digital acessível para todas as idades.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="topo">
+
+  <div class="access-bar">
+    <div class="access-bar__inner">
+      <span class="access-bar__label">Acessibilidade:</span>
+      <div class="access-bar__group" role="group" aria-label="Ajustar tamanho do texto">
+        <button type="button" class="access-btn" id="btn-font-decrease" aria-label="Diminuir tamanho do texto">A−</button>
+        <button type="button" class="access-btn" id="btn-font-reset" aria-label="Restaurar tamanho do texto padrão">A</button>
+        <button type="button" class="access-btn" id="btn-font-increase" aria-label="Aumentar tamanho do texto">A+</button>
+      </div>
+      <button type="button" class="access-btn access-btn--wide" id="btn-contrast" aria-pressed="false">
+        <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+        <span>Alto contraste</span>
+      </button>
+      <button type="button" class="access-btn access-btn--wide" id="btn-read" aria-pressed="false">
+        <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
+        <span id="btn-read-label">Ouvir a página</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="main-nav">
+    <div class="main-nav__inner">
+      <a href="#inicio" class="brand" aria-label="Acolle, página inicial">
+        <span class="brand__logo-box">
+          <img src="assets/logo-icon.png" alt="" class="brand__logo-img">
+        </span>
+        <span class="brand__text-group">
+          <span class="brand__name">acolle</span>
+          <span class="brand__slogan">Sempre um passo à frente, sem pressa.</span>
+        </span>
+      </a>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        <span>Menu</span>
+      </button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Início</a></li>
+          <li><a href="#sobre" class="nav__link">Sobre nós</a></li>
+          <li><a href="#recursos" class="nav__link">Recursos</a></li>
+          <li><a href="#como-funciona" class="nav__link">Como funciona</a></li>
+          <li><a href="#dicas" class="nav__link">Dicas de segurança</a></li>
+          <li><a href="#faq" class="nav__link">Perguntas frequentes</a></li>
+          <li><a href="mailto:acolle.corp@gmail.com" class="nav__link nav__link--cta">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo-principal">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+    <div class="section-inner hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Segurança digital com Inteligência Artificial</p>
+        <h1 id="hero-titulo" class="hero__title">
+          Proteção inteligente para o que realmente importa: <span class="text-accent">você</span>.
+        </h1>
+        <p class="hero__text">
+          O Acolle utiliza Inteligência Artificial para identificar possíveis golpes em chamadas, mensagens e links suspeitos.
+        </p>
+        <div class="hero__actions">
+          <a href="#sobre" class="btn btn--primary btn--lg">Conheça o Acolle</a>
+          <a href="#recursos" class="btn btn--outline btn--lg">Saiba mais</a>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="phone-mockup">
+          <div class="phone-mockup__notch"></div>
+          <div class="phone-mockup__screen">
+            <div class="phone-status">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Proteção ativa</span>
+            </div>
+            <div class="phone-card">
+              <div class="phone-card__icon"><i class="fa-solid fa-check"></i></div>
+              <p class="phone-card__title">Tudo certo!</p>
+              <p class="phone-card__text">O Acolle está monitorando sua segurança.</p>
+            </div>
+            <div class="phone-quick-actions">
+              <div class="phone-quick-actions__item"><i class="fa-solid fa-phone"></i><span>Chamadas</span></div>
+              <div class="phone-quick-actions__item"><i class="fa-solid fa-bell"></i><span>Alertas</span></div>
+              <div class="phone-quick-actions__item"><i class="fa-solid fa-link"></i><span>Verificar link</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE NÓS ===================== -->
+  <section class="section" id="sobre" aria-labelledby="sobre-titulo">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">Sobre nós</p>
+        <h2 id="sobre-titulo" class="section-title">Sobre o Acolle</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-grid__text">
+          <p>O Acolle foi desenvolvido para ajudar pessoas, especialmente idosos, a utilizarem a tecnologia com mais segurança.</p>
+          <p>Por meio da Inteligência Artificial, o aplicativo analisa chamadas, mensagens e links suspeitos, identificando possíveis tentativas de golpe.</p>
+        </div>
+        <div class="about-grid__art" aria-hidden="true">
+          <div class="art-circle">
+            <i class="fa-solid fa-people-arrows"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="mvv-grid">
+        <div class="mvv-card">
+          <div class="mvv-card__icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Missão</h3>
+          <p>Promover segurança digital e tranquilidade no dia a dia de todas as pessoas.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card__icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Visão</h3>
+          <p>Ser referência em proteção inteligente, acessível e respeitosa para todas as idades.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card__icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Valores</h3>
+          <p>Confiança, empatia, inclusão, inovação e responsabilidade.</p>
+        </div>
+      </div>
+
+      <div class="team">
+        <h3 class="team__title">Nossa equipe</h3>
+        <p class="team__subtitle">Conheça quem desenvolveu o Acolle.</p>
+
+        <div class="team-carousel">
+          <button type="button" class="team-carousel__arrow team-carousel__arrow--prev" id="team-prev" aria-label="Ver integrante anterior">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+
+          <ul class="team-carousel__track" id="team-track" tabindex="0" aria-label="Lista de integrantes da equipe, role para o lado para ver mais">
+            <li class="team-card">
+              <div class="team-card__photo">
+                <img src="assets/WhatsApp Image 2026-10-07 at 10.16.04.jpeg" alt="">
+              </div>
+              <p class="team-card__name">Guilherme Moreira</p>
+              <p class="team-card__role">CEO</p>
+              <a href="#" class="team-card__linkedin" aria-label="LinkedIn do integrante (link a definir)">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+              </a>
+            </li>
+
+            <li class="team-card">
+              <div class="team-card__photo">
+               <img src="assets/WhatsApp Image 2026-08-20 at 14.28.58.jpeg" alt="Foto de Kevin Novais">
+              </div>
+              <p class="team-card__name">Kevin Novais</p>
+              <p class="team-card__role">CTO</p>
+              <a href="https://www.linkedin.com/in/kevin-de-souza-novais-347726335/" class="team-card__linkedin" aria-label="LinkedIn do integrante (link a definir)">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+              </a>
+            </li>
+
+            <li class="team-card">
+              <div class="team-card__photo">
+                <img src="assets/WhatsApp Image 2026-09-02 at 10.31.52.jpeg" alt="Foto de Beatriz Carvalho">
+              </div>
+              <p class="team-card__name">Beatriz Carvalho</p>
+              <p class="team-card__role">Analista de dados</p>
+              <a href="https://www.linkedin.com/in/beatriz-carvalho-da-silva-435319379?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="team-card__linkedin" aria-label="LinkedIn do integrante (link a definir)">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+              </a>
+            </li>
+            <li class="team-card">
+              <div class="team-card__photo">
+                <img src="assets/WhatsApp Image 2026-09-02 at 10.33.12.jpeg" alt="Foto de Daniel Paz">
+              </div>
+              <p class="team-card__name">Daniel Paz</p>
+              <p class="team-card__role">Designer UX/UI</p>
+              <a href="#" class="team-card__linkedin" aria-label="LinkedIn do integrante (link a definir)">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+              </a>
+            </li>
+            <li class="team-card">
+              <div class="team-card__photo">
+                <img src="assets/WhatsApp Image 2026-08-20 at 10.19.48.jpeg" alt="">
+                
+              </div>
+              <p class="team-card__name">Gabriel Xavier</p>
+              <p class="team-card__role">QA</p>
+              <a href="https://www.linkedin.com/in/gabriel-xavier-617a1a34b?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="team-card__linkedin" aria-label="LinkedIn do integrante (link a definir)">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+              </a>
+            </li>
+          </ul>
+
+          <button type="button" class="team-carousel__arrow team-carousel__arrow--next" id="team-next" aria-label="Ver próximo integrante">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="team-carousel__dots" id="team-dots" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RECURSOS ===================== -->
+  <section class="section section--alt" id="recursos" aria-labelledby="recursos-titulo">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">Recursos</p>
+        <h2 id="recursos-titulo" class="section-title">Recursos do Acolle</h2>
+        <p class="section-lead">Tudo o que você precisa para ficar protegido.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fa-solid fa-phone-volume"></i></div>
+          <h3>Análise de chamadas</h3>
+          <p>A IA observa padrões em ligações recebidas para identificar sinais comuns de golpes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fa-solid fa-comment-dots"></i></div>
+          <h3>Análise de mensagens</h3>
+          <p>Verifica mensagens de texto e aplicativos em busca de comportamentos suspeitos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fa-solid fa-link"></i></div>
+          <h3>Verificação de links</h3>
+          <p>Analisa links compartilhados e avisa quando podem representar um risco.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fa-solid fa-bell"></i></div>
+          <h3>Alertas inteligentes</h3>
+          <p>Você recebe avisos claros e objetivos sobre possíveis riscos, sem complicação.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3>Contatos de emergência</h3>
+          <p>Tenha sempre à mão pessoas de confiança que podem te ajudar quando precisar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section class="section" id="como-funciona" aria-labelledby="como-funciona-titulo">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">Como funciona</p>
+        <h2 id="como-funciona-titulo" class="section-title">Simples, rápido e seguro</h2>
+      </div>
+
+      <ol class="process">
+        <li class="process__step">
+          <span class="process__number" aria-hidden="true">1</span>
+          <div class="process__icon"><i class="fa-solid fa-satellite-dish"></i></div>
+          <h3>Monitoramento</h3>
+          <p>O Acolle observa chamadas e mensagens em tempo real.</p>
+        </li>
+        <li class="process__step">
+          <span class="process__number" aria-hidden="true">2</span>
+          <div class="process__icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Análise com Inteligência Artificial</h3>
+          <p>Nessa etapa, a Inteligência Artificial analisa o conteúdo e identifica riscos.</p>
+        </li>
+        <li class="process__step">
+          <span class="process__number" aria-hidden="true">3</span>
+          <div class="process__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Identificação de possíveis riscos</h3>
+          <p>Padrões suspeitos associados a golpes são apontados com clareza.</p>
+        </li>
+        <li class="process__step">
+          <span class="process__number" aria-hidden="true">4</span>
+          <div class="process__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <h3>Alerta ao usuário</h3>
+          <p>Se houver suspeita de golpe, você recebe um aviso imediato e compreensível.</p>
+        </li>
+        <li class="process__step">
+          <span class="process__number" aria-hidden="true">5</span>
+          <div class="process__icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>Usuário decide como agir</h3>
+          <p>O Acolle informa — a decisão final sobre como agir é sempre sua.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== DICAS DE SEGURANÇA ===================== -->
+  <section class="section section--dark" id="dicas" aria-labelledby="dicas-titulo">
+    <div class="section-inner">
+      <div class="section-head section-head--light">
+        <p class="eyebrow eyebrow--light">Dicas de segurança</p>
+        <h2 id="dicas-titulo" class="section-title section-title--light">Aprenda a se proteger no dia a dia</h2>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-card__icon"><i class="fa-solid fa-clock"></i></div>
+          <p>Desconfie de mensagens urgentes.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-card__icon"><i class="fa-solid fa-key"></i></div>
+          <p>Nunca compartilhe senhas.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-card__icon"><i class="fa-solid fa-link-slash"></i></div>
+          <p>Não clique em links suspeitos.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-card__icon"><i class="fa-solid fa-building-columns"></i></div>
+          <p>Confirme informações diretamente com a instituição.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-card__icon"><i class="fa-solid fa-sack-dollar"></i></div>
+          <p>Desconfie de pedidos de dinheiro.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-card__icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <p>Não instale aplicativos de fontes desconhecidas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section" id="faq" aria-labelledby="faq-titulo">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">Perguntas frequentes</p>
+        <h2 id="faq-titulo" class="section-title">Perguntas frequentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-item__question">
+            O Acolle funciona em quais celulares?
+            <i class="fa-solid fa-chevron-down faq-item__chevron" aria-hidden="true"></i>
+          </summary>
+          <div class="faq-item__answer">
+            <p>O Acolle foi pensado para funcionar em smartphones Android e iOS. Consulte a loja de aplicativos do seu celular para verificar a compatibilidade completa.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__question">
+            O aplicativo utiliza meus dados?
+            <i class="fa-solid fa-chevron-down faq-item__chevron" aria-hidden="true"></i>
+          </summary>
+          <div class="faq-item__answer">
+            <p>O Acolle utiliza apenas as informações necessárias para identificar possíveis golpes, seguindo os princípios de proteção de dados da LGPD. Saiba mais na seção Privacidade.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__question">
+            A IA pode errar?
+            <i class="fa-solid fa-chevron-down faq-item__chevron" aria-hidden="true"></i>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Sim. Como toda tecnologia de Inteligência Artificial, o Acolle pode cometer erros ocasionais. Por isso, a decisão final sobre como agir é sempre do usuário — o Acolle é uma ferramenta de apoio, não um substituto do seu julgamento.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__question">
+            Como funciona a análise das chamadas?
+            <i class="fa-solid fa-chevron-down faq-item__chevron" aria-hidden="true"></i>
+          </summary>
+          <div class="faq-item__answer">
+            <p>O Acolle observa padrões em chamadas recebidas e utiliza Inteligência Artificial para identificar sinais que costumam estar associados a golpes. Quando um padrão suspeito é identificado, o usuário recebe um alerta.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__question">
+            O que acontece quando uma mensagem é considerada suspeita?
+            <i class="fa-solid fa-chevron-down faq-item__chevron" aria-hidden="true"></i>
+          </summary>
+          <div class="faq-item__answer">
+            <p>O Acolle exibe um alerta claro informando por que a mensagem foi identificada como suspeita, para que você possa decidir com segurança como agir.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRIVACIDADE ===================== -->
+  <section class="section section--privacy" id="privacidade" aria-labelledby="privacidade-titulo">
+    <div class="section-inner privacy-grid">
+      <div class="privacy-grid__icon" aria-hidden="true">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <div class="privacy-grid__content">
+        <p class="eyebrow">Privacidade</p>
+        <h2 id="privacidade-titulo" class="section-title">Sua segurança também está nos seus dados.</h2>
+        <p class="section-lead">
+          O Acolle considera privacidade, segurança e transparência como prioridades, seguindo os princípios da Lei Geral de Proteção de Dados (LGPD).
+        </p>
+        <ul class="privacy-list">
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Tratamento de dados com transparência.</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Uso responsável das informações necessárias ao funcionamento do app.</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Compromisso com os princípios da LGPD.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="#inicio" class="brand brand--footer" aria-label="Acolle, página inicial">
+        <span class="brand__logo-box brand__logo-box--footer">
+          <img src="assets/logo-icon.png" alt="" class="brand__logo-img">
+        </span>
+        <span class="brand__text-group">
+          <span class="brand__name brand__name--footer">acolle</span>
+        </span>
+      </a>
+      <p class="footer-slogan">"Sempre um passo à frente, sem pressa."</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/acolle.corporation?igsi=bzRjcmhvOXl4Yzlq" aria-label="Acolle no Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="mailto:acolle.corp@gmail.com" aria-label="Acolle no Instagram"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Links de navegação do rodapé">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#dicas">Dicas de segurança</a></li>
+        <li><a href="#faq">Perguntas frequentes</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-nav">
+      <h3>Institucional</h3>
+      <ul>
+        <li><a href="#privacidade">Privacidade</a></li>
+        <li><a href="mailto:acolle.corp@gmail.com">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Projeto de TCC — Desenvolvimento de Sistemas</p>
+    <p>ETEC de Itaquaquecetuba</p>
+    <p>2026</p>
+  </div>
+</footer>
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
